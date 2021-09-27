@@ -1,8 +1,9 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+    font-family: 'Fira Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,3 +12,222 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* font-family: 'Sacramento', cursive; */
+
+/* grocery icon size */
+.groc-size{
+  width : 78px;
+  height : 64px;
+}
+
+.cursor-for{
+  cursor: pointer;
+}
+
+
+/* .searchbar */
+@media screen and (min-width: 766px)  {
+  .displayafter{
+      display: none;
+  }
+}
+
+/* Wishlist */
+
+  
+@media screen and (min-width: 460px) {
+  .imageposition{
+       display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+
+
+/* cart :horizontal line */
+hr.new1 {
+  border-top: 2px solid black;
+}
+h1{
+  font-family: 'Pacifico', cursive;;
+}
+/* .homepic1 */
+.cont-homepic {
+  background-image: url("https://www.bookhubpublishing.com/wp-content/uploads/revslider/the7-book-header/bg-slider-book.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size:70px;
+  display: block;
+  color: rgb(224, 255, 255);
+  margin: auto;
+  max-width: 90%;
+  height : 400px;
+  padding-top: 93px;
+  font-family: 'Lobster', cursive;
+} 
+.text-pos
+{
+  text-align: start;
+  margin-left: 135px;
+}
+
+
+.homepic1{
+  width: 1000px;
+  height : 450px;
+  display: block;
+  margin: auto;
+}
+
+.home-image{
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  height : 400px;
+}
+
+@media screen and (max-width: 845px) {
+  .home-image{
+    width: 600px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .home-image{
+    width:  360px;
+    height: 240px;
+  }
+}
+/* carosuel */
+@media screen and (max-width: 590px) {
+  .carousel{
+    display: none;
+  }
+}
+/* seacrch bar */
+.pointer{
+  cursor: pointer;
+
+  position: absolute;
+
+  margin-left: 8px;
+  margin-top: 5px;
+  margin-right:2px ;
+
+  width : 178px;  
+  height : 35px;
+  
+
+  border: 1px solid black;
+  border-radius: 4px;
+
+  background-color: white;
+
+  overflow-y:scroll;
+}
+
+.form-control{
+  border:none;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+  box-shadow: none !important;
+  border-radius: 0px;
+}
+
+/* pre-footer icon size */
+.pre-size{
+  width: 70px;
+  height:80px;
+  margin-top: 10px;
+  margin-right: 8px;
+}
+
+.cartimg
+{
+  margin-left: 30px;
+  margin-top: 20px;
+  width: 190px;
+  height: 140px;
+}
+
+#container {
+  background-image: url("https://www.pngall.com/wp-content/uploads/4/Grocery-PNG-Image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size:36px;
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  height : 400px;
+  padding-top : 130px ;
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+  color:#fff
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+/* pre-footer margin */
+.margins
+{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+/* wishlist */
+.bgforsignin{
+  background-image: url("https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+/* Edit Profile */
+.image-upload > input{
+display: none;
+}
+.notify-badge{
+  position: relative;
+  height:1.5rem;
+  width:1.5rem;
+  border-radius: 70px;
+  right : -97px;
+  bottom: 27px;
+  background-color: rgb(199, 198, 194);
+  background-size: 8px;
+  padding-top: 2px;
+
+} 
