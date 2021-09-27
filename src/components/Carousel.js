@@ -13,7 +13,7 @@ export default  function Carousel(){
                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
               </div>
             
-            
+            {/* Carousel inner */}
              <div class="carousel-inner">
              
               <div class="carousel-item active" data-bs-interval="3000">
