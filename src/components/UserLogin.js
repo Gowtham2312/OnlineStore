@@ -59,23 +59,19 @@ export default function UserLogin() {
                 cartdata = usercartdata
                 dispatch(updateCart(cartdata))
                 localStorage.setItem("cartdata", JSON.stringify(cartdata))
-                console.log("cartdata-1", cartdata)
             }
 
             else if (cartitems[0] !== undefined && usercartdata[0] === undefined) {
                 cartdata = cartitems
                 dispatch(updateCart(cartdata))
                 localStorage.setItem("cartdata", JSON.stringify(cartdata))
-                console.log("cartdata-2", cartdata)
             }
             else {
                 cartdata = cartitems.concat(usercartdata)
                 dispatch(updateCart(cartdata))
                 localStorage.setItem("cartdata", JSON.stringify(cartdata))
-                console.log("cartdata-4", cartdata)
             }
 
-            console.log("isUSccess : ", isSuccess)
             history.push("/homepage")
         }
     }, [isSuccess])

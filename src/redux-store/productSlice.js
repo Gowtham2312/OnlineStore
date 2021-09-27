@@ -30,7 +30,6 @@ const productSlice=createSlice({
     },
     reducers:{
         updateProducts:(state,action)=>{
-            console.log("Action in reducer",action)
             state.productObj=action.payload
             return state
         }
@@ -38,7 +37,7 @@ const productSlice=createSlice({
     ,
     extraReducers:{
         [productList.fulfilled]:(state,action) =>{
-            console.log("action payload message is",action.payload)//action.payload gives whatever is returned from AsyncThunk
+            //action.payload gives whatever is returned from AsyncThunk
             state.productObj=action.payload
             state.isSuccess=true;
             state.isLoading=false;

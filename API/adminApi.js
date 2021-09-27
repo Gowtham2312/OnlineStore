@@ -43,7 +43,7 @@ adminApiObj.post("/adminlogin", expressErrorHandler(async (req,res) => {
     //getting Obj from collection
     let admin  = await adminCollection.findOne({adminname : adminCredentialsObj.adminname})
     //if adminname is wrong or wont exist
-    console.log("admin nae",admin)
+
     if(admin === null || admin === undefined)
     {
         res.send({ message : "Invalid adminname"})

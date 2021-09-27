@@ -62,7 +62,6 @@ export default function ShowProducts() {
 
             item.pcount = item.pcount + 1
 
-            console.log("item value is ", item)
             check.splice(index, 1, item)
             dispatch(updateCart(check))
             //replacing cartdata array in localstorage with updated array(check)
@@ -87,7 +86,6 @@ export default function ShowProducts() {
     const onFormSubmit = async (prodObj) => {
 
         prodObj.id = data
-        console.log("prodobj working", prodObj)
         //create formdata obj
         let formData = new FormData();
         //append image to it
@@ -98,7 +96,6 @@ export default function ShowProducts() {
         let response = await axios.post("/products/update-product", formData)
         alert(response.data.message)
         history.push(`/showproducts/${category}`)
-        console.log("After product Updation", response.data)
     }
 
     //moving to wishlist
@@ -121,7 +118,6 @@ export default function ShowProducts() {
 
     //req to view products and add them to state 
     useEffect(async () => {
-        console.log('category', category)
         let response = await axios.post("/products/view-products", { category })
         let allproducts = response.data;
         setProducts([...allproducts.payload])

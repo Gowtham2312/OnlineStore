@@ -50,8 +50,8 @@ function App() {
     let cartdata = JSON.parse(localStorage.getItem("cartdata"))
     let wishlist = JSON.parse(localStorage.getItem("wishlistData"))
     let object = { user: username, list: wishlist, cart: cartdata }
-    let response = await axios.post("/users/updatecart", { object })
-    console.log("response", response)
+    await axios.post("/users/updatecart", { object })
+
     localStorage.clear()
     dispatch(clearUserLoginStatus())
     history.push('/')
@@ -144,7 +144,7 @@ function App() {
                       <NavLink to="/admindashboard" className="nav-link text-white w-5 ms-4">Admin</NavLink>
                     </li>
                     <li class="nav-item mt-2 d-flex">
-                      <NavLink to="/adminlogin" className="nav-link text-white w-5 ms-4" onClick={onAdminLogout}>Logout <FiLogOut /></NavLink>
+                      <NavLink to="/" className="nav-link text-white w-5 ms-4" onClick={onAdminLogout}>Logout <FiLogOut /></NavLink>
                     </li>
                   </>
               }

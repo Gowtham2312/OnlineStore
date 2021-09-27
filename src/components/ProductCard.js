@@ -78,7 +78,6 @@ export default function ProductCard() {
     useEffect(async () => {
         let response = await axios.get("/products/get-products")
         let allproducts = response.data;
-        console.log("products card", allproducts)
         setProduct([...allproducts.payload])
     }, [])
 

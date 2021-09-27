@@ -18,7 +18,7 @@ export default function OrderHistory() {
         if (isSuccess) {
             let username = JSON.parse(localStorage.getItem("username"))
             let name = username
-            console.log("name",name)
+    
             let res = await axios.post("/users/get-orderhistory", { name })
             let alldata = res.data
             setproducts([...alldata.payload.orders])

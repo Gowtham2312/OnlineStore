@@ -9,8 +9,6 @@ export default function Cart() {
 
     let { cartProducts } = useSelector(state => state.cart)
 
-    console.log("cartProducts", cartProducts)
-
     let cartProduct = JSON.parse(JSON.stringify(cartProducts))
 
     let isSuccess = JSON.parse(localStorage.getItem('isSuccess'))
@@ -22,7 +20,6 @@ export default function Cart() {
     let i = 0, value = 0, dis = 0, total = 0, orderid = 0
 
     orderid = Math.round(Math.random() * 100) + 1000;
-    console.log("orderiD....", orderid)
 
     cartProduct.map((prod) => {
         i = i + ((+prod.productPrice) * (prod.pcount))
@@ -70,8 +67,6 @@ export default function Cart() {
     //remove an item
     function removeItem(index) {
 
-        // cartitems.splice(index, 1)
-        console.log(cartProduct[index])
         cartProduct.splice(index, 1)
 
         dispatch(updateCart(cartProduct))
@@ -79,7 +74,7 @@ export default function Cart() {
         localStorage.setItem("cartdata", JSON.stringify(cartProduct))
     }
 
-    //ADD item to cart 
+    //Add item to cart 
     function addtoWishlist(index, prod) {
 
         if (isSuccess) {
@@ -108,10 +103,8 @@ export default function Cart() {
                 let obj = { orderID: orderid, status: "successful", orderdata: cartProduct, price: total }
                 localStorage.setItem("orderdata", JSON.stringify(obj))
                 let Obj = { name, obj }
-                console.log("Obj", Obj)
                 let res = await axios.post("/users/update-orderhistory", { Obj })
                 let data = res.data
-                console.log("data from checkout", data)
             }
         }
         else {

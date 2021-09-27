@@ -84,7 +84,6 @@ userApiObj.post('/update-userdata',  multerObj.single('profilephoto') , checkTok
     const newuserdata = JSON.parse(req.body.userobj)
     // add image CDN link to userObj
     newuserdata.profilepic = req.file.path;
-    console.log("newuserdata", newuserdata)
     // save to userCollection
 
     console.log("userObj for update", newuserdata)
@@ -112,7 +111,7 @@ userApiObj.post("/updatecart", expressErrorHandler(async (req, res) => {
     //get productObj
     const obj = req.body.object;
     let { user, list , cart } = obj
-    console.log("list from api",list)
+
     await userCollection.updateOne({ username: user }, { $set: { cart: cart, wishlist: list } })
     //send ress
     res.send({ message: "user got updated" })
@@ -130,7 +129,6 @@ userApiObj.post("/update-orderhistory", expressErrorHandler(async (req, res) => 
 
     //get productObj
     const data = req.body.Obj;
-    console.log("history data", data)
 
     let result = await orderHistory.updateOne({ username: data.name }, { $push: { orders: data.obj } })
     //send ress
@@ -147,7 +145,7 @@ userApiObj.get("/get-users", expressErrorHandler(async (req, res) => {
 userApiObj.post("/get-one-user", expressErrorHandler(async (req, res) => {
 
     let value = req.body.forEditname
-    console.log("values in editapi",value)
+
     let user = await userCollection.findOne({username : value})
     res.send({ message: 'User data for edit', payload:user})
 }))

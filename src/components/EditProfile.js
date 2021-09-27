@@ -41,7 +41,6 @@ export default function EditProfile() {
         let name = (userobj.username).toLowerCase()
         data.map((users) => {
             if ((users.username).toLowerCase() === name) {
-                console.log("warning")
                 alert("Username already exists")
             }
             else {
@@ -52,7 +51,7 @@ export default function EditProfile() {
         if (value) {
 
             let usernam = JSON.parse(localStorage.getItem("username"))
-
+            //sending already logged in user details
             userobj.usernam = usernam
             //create formdata obj
             let formData = new FormData();
@@ -67,9 +66,9 @@ export default function EditProfile() {
                 alert(response.data.message)
                 localStorage.setItem("username",JSON.stringify(userobj.username))
                 dispatch(updateName(forEditname))
-                console.log("foreditName",forEditname)
+              
                 let editResp = await axios.post("/users/get-one-user", {forEditname})
-                console.log(editResp.data.payload)
+               
                 let editeduserdata = editResp.data.payload
                 dispatch(updateImage(editeduserdata.profilepic))
                 localStorage.setItem("profilepic",JSON.stringify(editeduserdata.profilepic))
@@ -79,7 +78,6 @@ export default function EditProfile() {
                 localStorage.clear()
                 history.push('/')
             }
-            console.log("User Got updated", response.data)
         }
     }
 ;

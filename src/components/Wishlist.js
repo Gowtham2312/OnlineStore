@@ -9,8 +9,6 @@ export default function Wishlist() {
 
     let userwishList = JSON.parse(JSON.stringify(userWishlist))
 
-    console.log("userwishList",userwishList)
-
     let dispatch = useDispatch()
 
     let isSuccess = JSON.parse(localStorage.getItem("isSuccess"))
@@ -52,7 +50,6 @@ export default function Wishlist() {
 
             item.pcount = item.pcount + 1
 
-            console.log("item value is ", item)
             check.splice(index, 1, item)
             dispatch(updateCart(check))
             //replacing cartdata array in localstorage with updated array(check)

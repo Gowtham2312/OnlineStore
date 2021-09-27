@@ -6,8 +6,6 @@ export const adminLogin = createAsyncThunk('loginadmin' , async(adminCredentials
     let data;
     let response = await axios.post('admin/adminlogin', adminCredentialsObj)
     data = response.data;
-    
-    console.log("daaa admin",data)
 
     if(data.message === "Login success")
     {

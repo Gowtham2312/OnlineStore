@@ -33,13 +33,11 @@ mongoClient.connect(dbUrl, (err, client)=>{
         let databaseObject = client.db('Grocerydb')
         let userCollection = databaseObject.collection("userCollection")
         let adminCollection = databaseObject.collection("adminCollection")
-        let cartCollection = databaseObject.collection("cartCollection")
         let productCollection = databaseObject.collection("productCollection")
         let orderHistory = databaseObject.collection("OrderHistory")
 
         app.set("userCollection",userCollection)
         app.set("adminCollection", adminCollection)
-        app.set("cartCollection", cartCollection)
         app.set("productCollection", productCollection)
         app.set("orderHistory",orderHistory)
         // app.locals.userCollection = userCollection
@@ -51,4 +49,4 @@ mongoClient.connect(dbUrl, (err, client)=>{
     }
 })
 
-app.listen(5050,console.log("Server is running on 5050"))
+app.listen(5050,console.log("Server is running on PORT: 5050"))

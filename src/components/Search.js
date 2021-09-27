@@ -23,7 +23,6 @@ export default function Search() {
   function Search() {
 
     let daata = searchField
-    console.log("Yeah  executed", daata)
     history.push(`/singleproduct/${daata}`)
 
   }
@@ -32,7 +31,6 @@ export default function Search() {
   function gotoProdDisplay(prodname) {
 
     let daata = prodname
-    console.log("Yeah  executed", daata)
     history.push(`/singleproduct/${daata}`)
 
   }

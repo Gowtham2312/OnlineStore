@@ -6,7 +6,6 @@ export const userLogin = createAsyncThunk('loginuser' , async(userCredentialsObj
     let data;
     let response = await axios.post('users/userlogin', userCredentialsObj)
     data = response.data;
-    console.log("daatata",data)
 
     if(data.message === "Login success")
     {

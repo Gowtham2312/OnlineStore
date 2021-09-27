@@ -33,7 +33,6 @@ export default function AddProducts() {
         let response = await axios.post("/products/add-products", formData)
         alert(response.data.message)
         history.push("/admindashboard/admin/add-products")
-        console.log("After product creation", response.data)
     }
 
     return (

@@ -33,8 +33,6 @@ export default function SingleProduct() {
             }
         });
 
-        console.log("value in cart data is ", item, index)
-
         //if localStorage is null
         if (check === null) {
             cartdata.push(prod)
@@ -46,7 +44,6 @@ export default function SingleProduct() {
 
             item.pcount = item.pcount + 1
 
-            console.log("item value is ", item)
             check.splice(index, 1, item)
             dispatch(updateCart(check))
             //replacing cartdata array in localstorage with updated array(check)
@@ -82,7 +79,6 @@ export default function SingleProduct() {
     useEffect(async () => {
         let response = await axios.post("/products/view-one-product", { daata })
         let allproducts = response.data;
-        console.log("allproducts.payload", allproducts.payload)
         if ((allproducts.payload).length === 0) {
             setValue(true)
         }

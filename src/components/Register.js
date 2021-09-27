@@ -30,7 +30,6 @@ export default function Register() {
         let responseObj = await axios.post("/users/register", formData)
 
         let payload = responseObj.data;
-        console.log("Payload is ",payload)
 
          if(payload.message === "User got added")
          {
