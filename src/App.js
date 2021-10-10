@@ -54,7 +54,6 @@ function App() {
 
     localStorage.clear()
     dispatch(clearUserLoginStatus())
-    history.push('/')
   }
 
   function onAdminLogout() {

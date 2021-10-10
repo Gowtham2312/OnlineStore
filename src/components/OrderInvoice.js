@@ -26,7 +26,7 @@ export default function OrderInvoice() {
                                 <th scope="row">{ind+1}</th>
                                 <td>{prod.productName}</td>
                                 <td>{prod.pcount}</td>
-                                <td> ₹{prod.productPrice}</td>
+                                <td> ₹{prod.pcount * prod.productPrice}</td>
                             </tr>
                             )
                         })

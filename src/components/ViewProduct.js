@@ -9,7 +9,6 @@ export default function ViewProducts() {
         let allproducts = response.data;
     }, [])
 
-
     return (
         <div>
             <Category />

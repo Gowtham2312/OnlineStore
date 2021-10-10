@@ -26,7 +26,7 @@ const dbUrl = process.env.DATABASE_URL;
 
 mongoClient.connect(dbUrl, (err, client)=>{
     if(err) {
-        console.log("err in db connect",err)
+        console.log("Error while connecting to DB",err)
     }
     else
     {
