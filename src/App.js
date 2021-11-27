@@ -77,7 +77,7 @@ function App() {
   return (
     <BrowserRouter>
       <nav class="navbar navbar-expand-md navbar-light bg-primary mx-auto">
-        <div class="container-fluid">
+        <div class="container-fluid hight">
           <a class="navbar-brand w-50 text-white" href="/">G-Store<i class="fas fa-store "></i></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

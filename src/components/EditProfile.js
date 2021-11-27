@@ -23,7 +23,7 @@ export default function EditProfile() {
 
     let [data, setData] = useState([])
 
-    let [value, setValue] = useState(false) //for checking  username existence
+    let [value, setValue] = useState(false) //for checking username existence
 
     let [updated, setUpdated] = useState(false) //for informing profie image updated
 

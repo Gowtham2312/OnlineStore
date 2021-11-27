@@ -25,7 +25,10 @@ code {
   cursor: pointer;
 }
 
+.hight{
+  height: 55px;
 
+}
 /* .searchbar */
 @media screen and (min-width: 766px)  {
   .displayafter{

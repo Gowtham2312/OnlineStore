@@ -108,7 +108,7 @@ export default function Cart() {
             }
         }
         else {
-            alert("please sign-In")
+            alert("Please sign-In")
         }
     }
 
